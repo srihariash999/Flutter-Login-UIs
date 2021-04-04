@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'dart:ui' as ui;
 
-import 'package:loginUis/Login1/login1_2.dart';
+import 'login1_2.dart';
+
 
 class Login11 extends StatefulWidget {
   @override
