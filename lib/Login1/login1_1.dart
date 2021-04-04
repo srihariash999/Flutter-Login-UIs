@@ -107,6 +107,7 @@ class _Login11State extends State<Login11> {
                     left: MediaQuery.of(context).size.width * 0.25,
                   ),
                   alignment: Alignment.bottomLeft,
+                  // ignore: deprecated_member_use
                   child: RaisedButton(
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(16.0)),

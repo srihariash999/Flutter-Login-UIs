@@ -31,6 +31,7 @@ class _HomePageState extends State<HomePage> {
           children: [
             Padding(
               padding: const EdgeInsets.only(top: 16.0),
+              // ignore: deprecated_member_use
               child: RaisedButton(
                 onPressed: () {
                   Navigator.push(context,
@@ -45,6 +46,7 @@ class _HomePageState extends State<HomePage> {
             ),
             Padding(
               padding: const EdgeInsets.only(top: 16.0),
+              // ignore: deprecated_member_use
               child: RaisedButton(
                 onPressed: () {
                   Navigator.push(context,
@@ -59,6 +61,7 @@ class _HomePageState extends State<HomePage> {
             ),
             Padding(
               padding: const EdgeInsets.only(top: 16.0),
+              // ignore: deprecated_member_use
               child: RaisedButton(
                 onPressed: () {
                   Navigator.push(context,

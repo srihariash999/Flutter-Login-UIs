@@ -32,7 +32,7 @@ class _Login1State extends State<Login1> {
                   child: RotatedBox(
                     quarterTurns: 3,
                     child: Text(
-                      "Farts & Balls",
+                      "Comp & Co",
                       style: GoogleFonts.modak(
                         textStyle:
                             TextStyle(color: Colors.white60, fontSize: 90.0),
@@ -45,6 +45,7 @@ class _Login1State extends State<Login1> {
                   child: Container(
                     alignment: Alignment.bottomLeft,
                     padding: EdgeInsets.only(bottom: 150.0, left: 50.0),
+                    // ignore: deprecated_member_use
                     child: RaisedButton(
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(16.0)),

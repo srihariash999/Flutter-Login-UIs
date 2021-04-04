@@ -126,6 +126,7 @@ class _Login3State extends State<Login3> {
                 height: 80.0,
               ),
               Container(
+                // ignore: deprecated_member_use
                 child: RaisedButton(
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(16.0)),
