@@ -6,6 +6,7 @@ import 'package:login_uis/Login3/login3.dart';
 
 void main() {
   runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
     home: HomePage(),
   ));
 }

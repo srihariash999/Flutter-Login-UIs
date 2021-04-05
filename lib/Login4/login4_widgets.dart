@@ -44,11 +44,13 @@ class TextWidget extends StatelessWidget {
   final String hint;
   final String label;
   final bool showSuffix;
+  final TextInputType textInputType;
   const TextWidget({
     Key key,
     @required this.controller,
     @required this.hint,
     @required this.label,
+    this.textInputType,
     this.showSuffix,
   }) : super(key: key);
   @override
@@ -58,6 +60,7 @@ class TextWidget extends StatelessWidget {
       child: TextField(
         controller: controller,
         style: k4HintStyle,
+        keyboardType: textInputType ?? TextInputType.text,
         decoration: InputDecoration(
           suffixIcon: InkWell(
             child: Icon(
