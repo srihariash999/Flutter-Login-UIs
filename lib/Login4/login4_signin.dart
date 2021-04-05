@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:login_uis/Login4/login4_constants.dart';
+import 'package:login_uis/Login4/login4_register.dart';
 import 'package:login_uis/Login4/login4_widgets.dart';
 
 class Login4Signin extends StatefulWidget {
@@ -20,32 +21,37 @@ class _Login4SigninState extends State<Login4Signin> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                k4VerticalSpaceSmall,
-                BackButton(),
-                k4VerticalSpaceSmall,
-                GreetingTitleWidget(),
-                k4VerticalSpaceSmall,
-                GreetingWidget1(),
-                k4VerticalSpaceSmall,
-                GreetingWidget2(),
-                k4VerticalSpaceMassive,
-                TextWidget(
-                    controller: _usernameController,
-                    hint: "",
-                    label: "Phone, email or username"),
-                k4VerticalSpaceSmall,
-                PasswordWidget(
-                  controller: _passwordController,
-                  hint: "",
-                  label: "Password",
+            Expanded(
+              child: SingleChildScrollView(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    k4VerticalSpaceSmall,
+                    BackButton(),
+                    k4VerticalSpaceSmall,
+                    GreetingTitleWidget(),
+                    k4VerticalSpaceSmall,
+                    GreetingWidget1(),
+                    k4VerticalSpaceSmall,
+                    GreetingWidget2(),
+                    k4VerticalSpaceMassive,
+                    TextWidget(
+                        controller: _usernameController,
+                        hint: "",
+                        label: "Phone, email or username"),
+                    k4VerticalSpaceSmall,
+                    PasswordWidget(
+                      controller: _passwordController,
+                      hint: "",
+                      label: "Password",
+                    ),
+                  ],
                 ),
-              ],
+              ),
             ),
             Column(
               children: [
+                k4VerticalSpaceMedium,
                 RegisterTextWidget(),
                 k4VerticalSpaceSmall,
                 InkWell(
@@ -185,14 +191,24 @@ class RegisterTextWidget extends StatelessWidget {
             ),
           ),
         ),
-        Text(
-          'Register',
-          textAlign: TextAlign.center,
-          style: GoogleFonts.ubuntu(
-            textStyle: TextStyle(
-              color: Colors.white,
-              fontSize: 18.0,
-              fontWeight: FontWeight.w400,
+        InkWell(
+          onTap: () {
+            Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(
+                builder: (context) => Login4SignUp(),
+              ),
+            );
+          },
+          child: Text(
+            'Register',
+            textAlign: TextAlign.center,
+            style: GoogleFonts.ubuntu(
+              textStyle: TextStyle(
+                color: Colors.white,
+                fontSize: 18.0,
+                fontWeight: FontWeight.w400,
+              ),
             ),
           ),
         ),
